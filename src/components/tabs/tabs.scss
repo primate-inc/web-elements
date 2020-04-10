@@ -1,0 +1,25 @@
+//functional
+
+.tabs {
+  border: 1px solid red;
+  &__content-block {
+    display: none;
+    .tabs-input:checked + label + & {
+      display: block;
+    }
+  }
+}
+
+// minimal styling
+
+.tabs { 
+  display: flex;
+  flex-wrap: wrap;
+  &-input { display: none; }
+  &__content-block {
+    flex: 1 0 100%;
+    order: 99;
+  }
+}
+
+

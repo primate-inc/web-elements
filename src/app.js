@@ -1,5 +1,6 @@
 import 'style.scss'
 import './components/accordion/index.js'
+import './components/tabs/index.js'
 
 console.log('hellou :)')
 
