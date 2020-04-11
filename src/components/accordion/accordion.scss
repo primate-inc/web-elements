@@ -1,6 +1,22 @@
 .accordion {
+  &__item {
+    &-content {
+      display: none;
+    }
+    &-input:checked + &-label + &-content {
+      display: block;
+    }
+  }
+}
+
+//minimal functional styling
+.accordion__item-input {
+  display: none;
+}
+
+// demo styles
+.accordion {
   width: 20rem;
-  height: 20rem;
 
   border: 1px solid red;
 }

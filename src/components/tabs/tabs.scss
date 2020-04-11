@@ -1,25 +1,31 @@
 //functional
 
 .tabs {
-  border: 1px solid red;
   &__content-block {
     display: none;
-    .tabs-input:checked + label + & {
-      display: block;
-    }
+  }
+  &__input:checked + &__label + &__content-block {
+    display: block;
   }
 }
 
-// minimal styling
+// minimal functional styling
 
-.tabs { 
+.tabs {
   display: flex;
   flex-wrap: wrap;
-  &-input { display: none; }
+
+  &__input { display: none; }
+
   &__content-block {
     flex: 1 0 100%;
     order: 99;
   }
 }
 
+// demo styles
+
+.tabs {
+  border: 1px solid red;
+}
 
