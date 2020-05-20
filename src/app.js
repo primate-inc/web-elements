@@ -44,7 +44,8 @@ const wrapComponent = (component, md, css) => {
 
   const preview = element('component__preview')
   const description = element('component__description')
-  const codeCSS = element('component__code-css')
+  const codeHTML = element('component__code')
+  const codeCSS = element('component__code')
 
   preview.innerHTML = component
   wrapper.appendChild(preview)
@@ -57,10 +58,13 @@ const wrapComponent = (component, md, css) => {
   // if (!!css) {
     // console.log('css :>> ', css);
     // codeCSS.innerHTML = marked("```" + css + "```")
-    // codeCSS.innerHTML = marked("```" + css + "```")
 
     // wrapper.appendChild(codeCSS)
   // }
+
+  console.log('object :>> ',  marked("```" + component + "```"));
+  codeHTML.innerHTML = marked("```" + component + "```")
+  wrapper.appendChild(codeHTML)
 
   return wrapper
 }
