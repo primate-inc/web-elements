@@ -1,13 +1,16 @@
 :root {
-  --c--background-primary: white;
-  --c--background-secondary: #cfd3d6;
-  --c--background-tertiary: #617e85;
+  --c--background-1: white;
+  --c--background-2: #dadfe3;
+  --c--background-3: #adb6bd;
+  --c--background-4: #78848c;
 
-  --c--text-primary: #030b11;
-  --c--text-secondary: #14333a;
-  --c--text-tertiary: lightgrey;
+  --c--text-1: #101417;
+  --c--text-2: #25333d;
+  --c--text-3: #3e5261;
 
-  --s--padding: 2rem;
+  --s--padding-1: 2em;
+  --s--padding-2: 1em;
+  --s--padding-3: .5em;
 }
 
 body {
@@ -18,7 +21,7 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background-color: var(--c--background-primary);
+  background-color: var(--c--background-1);
 }
 
 .main {
@@ -41,7 +44,7 @@ body {
 
   width: 100%;
 
-  background: var(--c--background-primary);
+  background: var(--c--background-1);
   border-radius: 1rem;
   box-shadow: 0 0 1rem 0 black;
   
@@ -49,19 +52,39 @@ body {
 
   &__preview,
   &__description {
-    padding: var(--s--padding);
+    padding: var(--s--padding-1);
   }
 
   &__description {
-    background-color: var(--c--background-secondary);
-    color: var(--c--text-primary);
+    background-color: var(--c--background-2);
+    color: var(--c--text-1);
     
     pre {
       padding: 1rem;
-    
-      background-color: var(--c--background--tertiary);
+      
+      background-color: var(--c--background-3);
       border-radius: .5rem;
+
+      color: var(--c--text-2);
     }
   }
+}
 
+[class$='__label'] { 
+  display: block;
+  
+  padding: var(--s--padding-3); 
+  
+  width: 100%;
+  
+  background-color: var(--c--background-3);
+}
+
+[class$='__content'] { 
+  padding: var(--s--padding-2); 
+  background-color: var(--c--background-2);
+}
+
+h3 {
+  color: var(--c--text-2);
 }
