@@ -32,6 +32,20 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
       {
         test: /\.html$/i,
         loader: 'html-loader'
+      },
+      {
+        test: /\.md$/,
+        use: [
+            {
+                loader: "html-loader"
+            },
+            {
+                loader: "markdown-loader",
+                options: {
+                  headerIds: false
+                }
+            }
+        ]
       }
     ]
   },
@@ -60,6 +74,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
     }),
     new MiniCssExtractPlugin({
       filename: 'app.[contenthash:8].css',
+      chunkFilename: '[id].css',
     })
   ]
 }

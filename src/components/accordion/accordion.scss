@@ -16,7 +16,11 @@
 
 // demo styles
 .accordion {
-  width: 20rem;
+  width: 100%;
 
-  border: 1px solid red;
+  &__item {
+    &-label {
+      background-color: var(--c--background-tertiary);
+    }
+  }
 }

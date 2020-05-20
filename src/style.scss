@@ -1,3 +1,15 @@
+:root {
+  --c--background-primary: white;
+  --c--background-secondary: #cfd3d6;
+  --c--background-tertiary: #617e85;
+
+  --c--text-primary: #030b11;
+  --c--text-secondary: #14333a;
+  --c--text-tertiary: lightgrey;
+
+  --s--padding: 2rem;
+}
+
 body {
   display: flex;
   align-content: center;
@@ -5,5 +17,51 @@ body {
 
   width: 100vw;
   height: 100vh;
+
+  background-color: var(--c--background-primary);
 }
 
+.main {
+  width: 100%;
+  max-width: 800px;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.component {
+  margin: 5rem auto;
+  padding: 0;
+
+  width: 100%;
+
+  background: var(--c--background-primary);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 black;
+  
+  overflow: hidden;
+
+  &__preview,
+  &__description {
+    padding: var(--s--padding);
+  }
+
+  &__description {
+    background-color: var(--c--background-secondary);
+    color: var(--c--text-primary);
+    
+    pre {
+      padding: 1rem;
+    
+      background-color: var(--c--background--tertiary);
+      border-radius: .5rem;
+    }
+  }
+
+}
