@@ -1,31 +1,49 @@
-//functional
-
 .tabs {
   &__content-block {
-    display: none;
+    // display: none;
+    opacity: 0;
   }
+  
   &__input:checked + &__label + &__content-block {
-    display: block;
+    // display: block;
+    opacity: 1; 
   }
+
+
 }
 
-// minimal functional styling
-
 .tabs {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-flow: row wrap;
 
-  &__input { display: none; }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+
+  &-tab {
+    flex: 0 0 auto;
+  }
+
+  &__input { 
+    position: absolute; 
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  label {
+    display: flex;
+    grid-column: auto;
+    grid-row: 1/2;
+    width: auto;
+    margin: 0;
+
+    &:last-of-type { margin-right: auto;}
+  }
 
   &__content-block {
-    flex: 1 0 100%;
-    order: 99;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    // order: 99;
+    // flex: 1 0 100%;
   }
 }
-
-// demo styles
-
-.tabs {
-  border: 1px solid red;
-}
-
