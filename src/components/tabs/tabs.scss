@@ -1,9 +1,12 @@
 //functional
 
 .tabs {
+  width: 100%;
+
   &__content-block {
     display: none;
   }
+  
   &__input:checked + &__label + &__content-block {
     display: block;
   }
@@ -17,15 +20,16 @@
 
   &__input { display: none; }
 
+  &__label {
+    &-inner {
+      padding: 1rem;
+      background-color: var(--c--background-3);
+    }
+  }
+
   &__content-block {
     flex: 1 0 100%;
     order: 99;
   }
-}
-
-// demo styles
-
-.tabs {
-  border: 1px solid red;
 }
 

@@ -30,7 +30,7 @@ body {
   max-width: 800px;
 }
 
-.content {
+.wrapper {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -86,7 +86,7 @@ body {
   }
 }
 
-[class$='__label'] { 
+.label {
   display: block;
   
   padding: var(--s--padding-3); 
@@ -96,7 +96,7 @@ body {
   background-color: var(--c--background-3);
 }
 
-[class$='__content'] { 
+.content { 
   padding: var(--s--padding-2); 
   background-color: var(--c--background-2);
 }

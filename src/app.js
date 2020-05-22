@@ -2,6 +2,10 @@ import 'style.scss'
 import './components/accordion/index.js'
 import './components/tabs/index.js'
 
+
+// const x = require('raw-loader!style.scss')
+// console.log('css :>> ', x);
+
 const marked = require('marked');
 
 // grab the element where we'll output the HTML to
@@ -62,9 +66,9 @@ const wrapComponent = (component, md, css) => {
     // wrapper.appendChild(codeCSS)
   // }
 
-  console.log('object :>> ',  marked("```" + component + "```"));
-  codeHTML.innerHTML = marked("```" + component + "```")
-  wrapper.appendChild(codeHTML)
+//  console.log('object :>> ',  marked("```" + component + "```"));
+//  codeHTML.innerHTML = marked("```" + component + "```")
+//  wrapper.appendChild(codeHTML)
 
   return wrapper
 }
